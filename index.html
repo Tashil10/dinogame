@@ -255,8 +255,8 @@ function update() {
     // Collision — tight AABB
     const dinoLeft  = DINO_LEFT + 6;
     const dinoRight = DINO_LEFT + 38;
-    const dinoBot   = dino.y + 52;
-    const dinoTop   = dino.y + 6;
+    const dinoBot   = GAME_H - dino.y;  // convert from-bottom to from-top
+    const dinoTop   = GAME_H - dino.y - 52;
 
     const obsLeft  = o.x - o.w;
     const obsRight = o.x;
